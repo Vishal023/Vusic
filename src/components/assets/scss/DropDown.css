@@ -1,0 +1,41 @@
+.dropdown {
+  position: absolute;
+  z-index: 100000;
+  top: 67px;
+  right: 9vw;
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  width: 20vw;
+  user-select: none;
+}
+.dropdown .dropdown-head {
+  flex-flow: column;
+}
+.dropdown .dropdown-head p {
+  color: gray;
+}
+.dropdown .lang-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+}
+.dropdown .lang-list button {
+  margin: 5px;
+}
+.dropdown .lang-list button:hover {
+  background-color: #1abc9c;
+  cursor: pointer;
+}
+.dropdown .button-div {
+  width: 100%;
+}
+.dropdown .button-div button {
+  width: 100%;
+  padding: 7px;
+  background-color: #1abc9c;
+  border: none;
+}
+
+/*# sourceMappingURL=DropDownLanguageList.scss.map */

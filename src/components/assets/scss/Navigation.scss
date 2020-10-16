@@ -1,0 +1,43 @@
+@mixin flexBox(){
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+nav{
+  height: 10vh;
+  display: flex;
+  background-color: #f6f6f6;
+  user-select: none;
+  border-bottom: 1px solid #e0e0e0;
+  div{
+    @include flexBox;
+  }
+  .navigation{
+    flex-flow: row wrap;
+  }
+  .language{
+    .language-head{
+      flex-direction: column;
+      padding: 0;
+      div{
+        padding: 0;
+      }
+      .expand-grp{
+        p{
+          color: darkgrey;
+        }
+      }
+      align-items: flex-start;
+    }
+    .expand-grp{
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 970px){
+  nav{
+    display: none;
+  }
+}

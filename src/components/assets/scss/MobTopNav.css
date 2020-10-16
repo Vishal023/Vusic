@@ -1,0 +1,16 @@
+.mob-top-navigation {
+  display: none;
+}
+
+@media only screen and (max-width: 970px) {
+  .mob-top-navigation {
+    height: 10vh;
+    display: flex;
+    flex-flow: row;
+  }
+  .mob-top-navigation div {
+    padding: 2px;
+  }
+}
+
+/*# sourceMappingURL=MobTopNav.scss.map */

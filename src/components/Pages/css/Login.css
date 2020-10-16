@@ -1,0 +1,67 @@
+#main {
+  font-family: Consolas, sans-serif;
+  background: #794141;
+  background: linear-gradient(110deg, #eb4559 50%, #f78259 50%);
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+}
+#main .nav-item {
+  height: 10vh;
+  display: flex;
+  font-size: 1.3rem;
+}
+#main .nav-item .navbar-brand {
+  font-family: "Pacifico", cursive;
+  color: #f8eeee;
+  font-size: 3rem;
+}
+#main .main-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+}
+#main .main-row .main-row-img {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+#main .main-row .main-row-img .head-phone-img {
+  width: 60%;
+}
+#main .main-row .main-row-text {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+#main .main-row .main-row-text h1 {
+  font-family: "Bungee", cursive;
+  font-size: 3rem;
+}
+#main .main-row .main-row-text p {
+  color: #f8eeee;
+  font-size: 1.2rem;
+}
+#main .main-row .main-row-text .btn {
+  font-family: Consolas, sans-serif;
+  letter-spacing: 2px;
+  border: none;
+  background-color: #282c34;
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+#main .main-row .main-row-text .btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Login.scss.map */

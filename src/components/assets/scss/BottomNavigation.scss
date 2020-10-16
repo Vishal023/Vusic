@@ -1,0 +1,22 @@
+.bottom-navigation{
+   height: 10vh;
+   display: flex;
+   div{
+     height: 10vh;
+     flex-grow: 1;
+     svg{
+       font-size: 1.9rem;
+     }
+   }
+ }
+@media only screen and (max-width: 320px){
+  .bottom-navigation{
+    div{
+      flex-shrink: 1;
+      svg{
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+

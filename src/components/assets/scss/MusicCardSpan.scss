@@ -1,0 +1,22 @@
+.MusicCardSpan{
+  display: flex;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  .d1{
+    display: flex;
+    flex-grow: 1;
+    div{
+      padding-left: 10px;
+    }
+  }
+  img{
+    width: 40px;
+    height: 40px;
+  }
+  .play{
+
+  }
+}

@@ -1,0 +1,26 @@
+.dropdown{
+  position: absolute;
+  z-index: 100000;
+  top: 67px;
+  right:9vw;
+  display: flex;
+  flex-flow: column;
+  border: 1px solid #e0e0e0;
+  border-radius:0 0 10px 10px;
+  width: 20vw;
+  user-select: none;
+  .dropdown-head{
+    flex-flow: column;
+    p{
+      color: gray;
+    }
+  }
+  .button-div{
+    width: 100%;
+    button{
+      width: 100%;
+      padding: 7px;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+nav {
+  height: 10vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  background-color: #f6f6f6;
+  user-select: none;
+}
+nav div {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+nav .navigation {
+  flex-flow: row wrap;
+}
+nav .navigation a {
+  color: #000;
+  padding-right: 10px;
+  font-size: 1.1rem;
+}
+nav .navigation a:hover {
+  transform: scale(1.1);
+}
+nav .language .language-head {
+  flex-direction: column;
+  padding: 0;
+  align-items: flex-start;
+}
+nav .language .language-head div {
+  padding: 0;
+}
+nav .language .language-head .expand-grp p {
+  color: darkgrey;
+}
+nav .language .expand-grp {
+  padding: 0;
+}
+
+@media only screen and (max-width: 970px) {
+  nav {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Navigation.scss.map */

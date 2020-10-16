@@ -1,0 +1,24 @@
+.search {
+  flex-grow: 1;
+}
+.search .search-container {
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 0;
+}
+.search input {
+  font-size: 1rem;
+  line-height: 1;
+  width: 85%;
+  overflow: visible;
+  padding: 11px 45px;
+  border: none;
+  border-radius: 999px;
+  transition: all 0.15s ease-in-out;
+  outline: none;
+}
+.search .cancel:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=SearchBar.scss.map */

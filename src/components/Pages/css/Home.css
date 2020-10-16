@@ -1,0 +1,13 @@
+.home-music-container {
+  display: grid;
+  grid-template-columns: 18% 80%;
+  user-select: none;
+}
+
+@media only screen and (max-width: 970px) {
+  .home-music-container {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=Home.scss.map */

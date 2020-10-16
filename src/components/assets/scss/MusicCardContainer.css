@@ -1,0 +1,82 @@
+.music-card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  height: 80vh;
+}
+.music-card-container .music-card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 10px;
+  flex-basis: 15%;
+}
+.music-card-container .music-card .music-card-cover {
+  position: relative;
+}
+.music-card-container .music-card .music-card-cover img {
+  width: 150px;
+  height: 150px;
+}
+.music-card-container .music-card .music-card-cover .play-circle {
+  position: absolute;
+  left: calc(50% - 15% - 10px);
+  top: calc(50% - 15% - 10px);
+  visibility: hidden;
+  font-size: 4rem;
+}
+.music-card-container .music-card .music-card-cover .hover-img {
+  visibility: visible;
+}
+.music-card-container .music-card .music-card-cover:hover {
+  cursor: pointer;
+}
+.music-card-container .music-card .music-card-cover:hover img {
+  filter: blur(1.5px);
+}
+.music-card-container .music-card .music-card-cover:hover .play-circle {
+  color: #d91a40;
+  visibility: visible;
+}
+.music-card-container .music-card .music-card-details .song-name {
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+.music-card-container .music-card .music-card-details .author-name {
+  font-weight: lighter;
+  color: gray;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d91a40;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media only screen and (max-width: 970px) {
+  .music-card-container {
+    height: 70vh;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=MusicCardContainer.scss.map */

@@ -1,0 +1,19 @@
+.home-music-container{
+  display: flex;
+  .sidebar-home{
+    flex: 0.2;
+  }
+  .main-home{
+    flex: 0.8;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .home-music-container {
+    .sidebar-home{
+      flex: 0;
+    }
+    .main-home{
+      flex: 1;
+    }
+  }
+}

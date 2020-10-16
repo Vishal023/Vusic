@@ -1,0 +1,30 @@
+.music-card{
+  padding: 10px;
+  .music-card-cover{
+    position: relative;
+    img{
+      width: 150px;
+      height: 150px;
+    }
+    .play-circle{
+      position: absolute;
+      left: calc(50% - 15% - 10px);
+      top: calc(50% - 15% - 10px);
+      visibility: hidden;
+      font-size: 4rem;
+    }
+    .hover-img{
+      visibility: visible;
+    }
+  }
+  .music-card-cover:hover{
+    cursor: pointer;
+    img{
+      filter: brightness(0.34);
+    }
+    .play-circle{
+      color: #fff;
+      visibility: visible;
+    }
+  }
+}

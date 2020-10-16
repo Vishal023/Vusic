@@ -1,0 +1,21 @@
+.dropdown-profile {
+  position: absolute;
+  z-index: 100000;
+  top: 64px;
+  right: 1vw;
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  width: 7.5vw;
+  user-select: none;
+}
+.dropdown-profile .profile, .dropdown-profile .settings {
+  width: 100%;
+}
+.dropdown-profile :hover {
+  background-color: #1abc9c;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=DropDownProfile.scss.map */

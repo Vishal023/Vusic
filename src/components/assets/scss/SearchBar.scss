@@ -1,0 +1,25 @@
+.search{
+  flex-grow: 1;
+  .search-container{
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: 0;
+  }
+  input{
+    font-size: 1rem;
+    line-height: 1;
+    width: 85%;
+    overflow: visible;
+    padding: 11px 45px;
+    border: none;
+    border-radius: 999px;
+    transition: all .15s ease-in-out;
+    outline: none;
+  }
+  .cancel:hover{
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+}
