@@ -1,6 +1,6 @@
-import React, {useContext, useState} from 'react';
+import React, { useState} from 'react';
 import '../assets/scss/ControlsToggleButton.scss';
-import {ThemeContext} from "../../api/Theme";
+import Button from "@material-ui/core/Button";
 
 function ControlsToggleButton(props) {
     let ButtonOne = props.defaultIcon;
@@ -8,20 +8,26 @@ function ControlsToggleButton(props) {
     const [buttonType, setButton] = useState(false);
 
     function handleChange() {
-        setButton(!buttonType);
-        props.onClicked(props.type,!buttonType);
+        if (props.type === "prev" || props.type === "next") {
+            setButton(true);
+            props.onClicked(props.type, true);
+        }else{
+            setButton(!buttonType);
+            props.onClicked(props.type, !buttonType);
+        }
     }
 
     return (
-        <div style={props.style}
-             onClick={handleChange}
-             className={props.type}>
+        <Button
+            style={props.style}
+            onClick={handleChange}
+            className={props.type}>
             {
                 !buttonType ?
                     ButtonOne :
                     ButtonTwo
             }
-        </div>
+        </Button>
     );
 }
 

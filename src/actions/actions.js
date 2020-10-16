@@ -10,17 +10,3 @@ export const setCurrentPlaying = (curr_music) => {
         payload: curr_music
     };
 }
-export const getPrevTrack = (id) => {
-    return {
-        type:"SET_PREV_TRACK",
-        payload: id-1
-    };
-};
-
-export const getNextTrack = (id) => {
-    return {
-        type:"SET_NEXT_TRACK",
-        payload: id+1
-    };
-};
-

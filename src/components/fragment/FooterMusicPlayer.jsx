@@ -14,21 +14,12 @@ import ControlsToggleButton from "./ControlsToggleButton";
 import Name from "./Name";
 import {ThemeContext} from "../../api/Theme";
 import {useDispatch, useSelector} from "react-redux";
-import {getNextTrack, getPrevTrack, setCurrentPlaying} from "../../actions/actions";
+import {setCurrentPlaying} from "../../actions/actions";
 
 
-function FooterMusicPlayer() {
+function FooterMusicPlayer({music}) {
 
-    const [{id,name,author_name,img,lang,timesPlayed,musicName},setCurrTrack] = useState({
-        id:25,
-        name: "Happier",
-        author_name: "Marshmello",
-        img: "happier.jpg",
-        lang: "ENGLISH",
-        timesPlayed:0,
-        musicName:"happier.mp3"
-    });
-    const [track,setTrack] = useState(require("../assets/music/"+musicName));
+    const [{id, name, author_name, img, musicName}, setCurrTrack] = useState(music);
     const [isRepeatClicked, setRepeatClick] = useState(false);
     const [isPrevClicked, setPrevClicked] = useState(false);
     const [isNextClicked, setNextClicked] = useState(false);
@@ -39,8 +30,8 @@ function FooterMusicPlayer() {
     const [duration, setDuration] = useState(0);
     const [currTime, setCurrTime] = useState(0);
 
-    const handleToggle = (type,val) => {
-        switch (type){
+    const handleToggle = (type, val) => {
+        switch (type) {
             case "repeat":
                 setRepeatClick(val);
                 break;
@@ -75,37 +66,49 @@ function FooterMusicPlayer() {
         audioElement.current.volume = volume / 100;
         audioElement.current.muted = isVolumeClicked;
         audioElement.current.onloadeddata = () => {
-            if (audioElement.current!=null)
+            if (audioElement.current != null)
                 setDuration(audioElement.current.duration)
         };
         setInterval(() => {
-            if (audioElement.current!==null)
+            if (audioElement.current !== null)
                 setCurrTime(audioElement.current.currentTime);
         })
     });
+
+    useEffect(() => {
+        setCurrTrack(music);
+    }, [music]);
+
+
     useEffect(() => {
         setSeekTime((currTime) / (duration / 100))
     }, [currTime, duration]);
 
-    const {playing,nextTrack} = useSelector(state => state.musicReducer);
+    const dispatch = useDispatch();
+    const {playlists} = useSelector(state => state.musicReducer);
 
     useEffect(()=>{
-        if(playing!=null){
-            setCurrTrack(playing);
-            setTrack(require("../assets/music/"+musicName))
-        }
-    }, [musicName, playing]);
-
-    const dispatch = useDispatch();
-
+        audioElement.current.onended = ()=> {
+            setNextClicked(true);
+        };
+    })
 
     useEffect(()=>{
         if (isNextClicked){
-            dispatch(getNextTrack(id))
+            let currTrackId = (id+1) % playlists.length;
+            dispatch(setCurrentPlaying(playlists[currTrackId]));
+            setNextClicked(false);
         }
-    });
+        if (isPrevClicked){
+            let currTrackId = (id-1) % playlists.length;
+            if ((id-1)<0){
+                currTrackId = playlists.length - 1;
+            }
+            dispatch(setCurrentPlaying(playlists[currTrackId]));
+            setPrevClicked(false);
+        }
+    },[dispatch, id, isNextClicked, isPrevClicked, playlists]);
 
-    console.log(nextTrack)
 
     function formatTime(secs) {
         const t = new Date(1970, 0, 1);
@@ -120,7 +123,7 @@ function FooterMusicPlayer() {
 
     const pointer = {
         cursor: "pointer",
-        color:useStyle.theme
+        color: useStyle.theme
     };
 
     return (
@@ -154,7 +157,7 @@ function FooterMusicPlayer() {
                                       changeIcon={<SkipPreviousIcon fontSize={"large"}/>}
                                       onClicked={handleToggle}/>
 
-                <audio ref={audioElement} src={track} preload={"metadata"}/>
+                <audio ref={audioElement} src={require("../assets/music/" + musicName)} preload={"metadata"}/>
 
                 <ControlsToggleButton style={pointer} type={"play-pause"}
                                       defaultIcon={<PlayArrowIcon fontSize={"large"}/>}
@@ -176,7 +179,7 @@ function FooterMusicPlayer() {
                     </p>
                 </div>
                 <div className={"slider"}>
-                    <Slider style={{color:useStyle.theme}} value={volume} onChange={handleVolumeChange}/>
+                    <Slider style={{color: useStyle.theme}} value={volume} onChange={handleVolumeChange}/>
                 </div>
                 <ControlsToggleButton style={pointer} type={"volume"}
                                       defaultIcon={<VolumeUpIcon/>}
