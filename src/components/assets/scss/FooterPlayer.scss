@@ -4,7 +4,6 @@
   height: 10vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   .playback {
     position: absolute;
@@ -22,9 +21,7 @@
 }
 
 .curr-music-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: flex-start !important;
   flex-grow: 1;
   height: 100%;
   .curr-music-cover{
@@ -49,7 +46,8 @@
   justify-content: center;
   height: 100%;
   align-items: center;
-  flex-grow: 1;
+  flex-basis: 40%;
+
   div {
     padding-right: 10px;
   }
@@ -60,7 +58,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  flex-grow: 1;
+  flex-basis: 30%;
   height: 100%;
   .timer {
     padding-right: 10px;
@@ -78,6 +76,7 @@
 @media only screen and (max-width: 970px) {
   .footer-player {
     .playback-controls {
+      justify-content: flex-end;
       flex-grow: 0;
       padding: 0 20px;
     }
@@ -88,7 +87,7 @@
   }
 }
 
-@media only screen and (max-width: 264px) {
+@media only screen and (max-width: 400px) {
   .footer-player {
     .curr-music-details {
       display: none;

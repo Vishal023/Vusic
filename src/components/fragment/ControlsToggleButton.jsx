@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import '../assets/scss/ControlsToggleButton.scss';
 import Button from "@material-ui/core/Button";
 

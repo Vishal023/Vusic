@@ -10,8 +10,8 @@ import {useSelector} from "react-redux";
 import {ThemeContext} from "../../api/Theme";
 import Profile from "../fragment/Profile";
 import AddMusic from "../fragment/AddMusic";
-
 import FooterSelectMusic from "../fragment/FooterSelectMusic";
+import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 
 function getCurrPage(pathName) {
     switch (pathName) {
@@ -27,6 +27,8 @@ function getCurrPage(pathName) {
 }
 
 function Home() {
+
+
     const [screenSize, setScreenSize] = useState(undefined);
     const [currMusic, setCurrMusic] = useState(null);
     window.addEventListener("resize", handleResize);
@@ -42,7 +44,7 @@ function Home() {
 
     const useStyle = useContext(ThemeContext);
     let pathname = window.location.pathname;
-    const {playing} = useSelector(state => state.musicReducer);
+    const {playing,bannerOpen} = useSelector(state => state.musicReducer);
 
 
     useEffect(() => {
@@ -66,7 +68,13 @@ function Home() {
                     }
                 </div>
             </section>
-            {/*<MusicCardLong/>*/}
+            {
+                bannerOpen
+                    &&
+                <section className="current-large-banner">
+                    <CurrentPlayingLarge/>
+                </section>
+            }
             <React.Fragment>
                 {
                     currMusic ? <FooterMusicPlayer music={currMusic}/> : <FooterSelectMusic/>

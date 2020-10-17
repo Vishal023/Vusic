@@ -1,13 +1,16 @@
 .MusicCardSpan{
-  display: flex;
-  height: 50px;
+  user-select: none;
+  min-height: 50px;
   padding: 5px;
   margin: 5px;
+  display: flex;
   align-items: center;
   border-bottom: 1px solid #e0e0e0;
+  text-align: justify;
   .d1{
     display: flex;
     flex-grow: 1;
+    align-items: center;
     div{
       padding-left: 10px;
     }
@@ -19,4 +22,12 @@
   .play{
 
   }
+}
+.MusicCardSpan:hover{
+  background-color: #07689f;
+  color: #fafafa;
+}
+.MusicCardSpan:active{
+  background-color: #fafafa;
+  color: #07689f;
 }

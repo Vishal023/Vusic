@@ -6,6 +6,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
+
 function BottomNavigationMobile() {
     const [value, setValue] = React.useState('home');
     const handleChange = (event, newValue) => {

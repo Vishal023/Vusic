@@ -1,16 +1,15 @@
 import React from 'react';
 import '../assets/scss/MusicCardSpan.scss';
 import {PlayArrow} from "@material-ui/icons";
-import MusicCard from "./MusicCard";
 
-function MusicCardSpan() {
+function MusicCardSpan({music}) {
     return (
-        <div className={"MusicCardSpan"}>
+        <div style={{cursor:"pointer"}} className={"MusicCardSpan"}>
             <div className={"d1"}>
-                <img src={require("../assets/img/buttabomma.jpg")} alt=""/>
+                <img src={require("../assets/img/"+music.img)} alt=""/>
                 <div className="detail">
-                    <h4>HAPPIER</h4>
-                    <p>MarshMello</p>
+                    <h4>{music.name}</h4>
+                    <p>{music.author_name}</p>
                 </div>
             </div>
             <div className="play">

@@ -14,7 +14,8 @@ import ControlsToggleButton from "./ControlsToggleButton";
 import Name from "./Name";
 import {ThemeContext} from "../../api/Theme";
 import {useDispatch, useSelector} from "react-redux";
-import {setCurrentPlaying} from "../../actions/actions";
+import {setBannerOpen, setCurrentPlaying} from "../../actions/actions";
+import Button from "@material-ui/core/Button";
 
 
 function FooterMusicPlayer({music}) {
@@ -29,6 +30,13 @@ function FooterMusicPlayer({music}) {
     const [seekTime, setSeekTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [currTime, setCurrTime] = useState(0);
+    const [bannerToggle,setBannerToggle] = useState(false);
+
+    const audioElement = useRef();
+    const dispatch = useDispatch();
+    const {playlists} = useSelector(state => state.musicReducer);
+    const useStyle = useContext(ThemeContext);
+    const pointer = { cursor: "pointer",  color: useStyle.theme };
 
     const handleToggle = (type, val) => {
         switch (type) {
@@ -57,11 +65,20 @@ function FooterMusicPlayer({music}) {
     const handleVolumeChange = (event, newValue) => {
         setVolume(newValue);
     };
+    const handleBannerToggle = ()=> {
+        setBannerToggle(!bannerToggle);
+    };
 
-    const audioElement = useRef();
+
+    useEffect(()=>{
+        dispatch(setBannerOpen(bannerToggle));
+    },[dispatch,bannerToggle]);
+
 
     useEffect(() => {
-        isPlaying ? audioElement.current.play() : audioElement.current.pause();
+        isPlaying
+            ? audioElement.current.play().then(()=>{}).catch((e)=>{audioElement.current.pause(); audioElement.current.currentTime=0;})
+            : audioElement.current.pause();
         audioElement.current.loop = isRepeatClicked;
         audioElement.current.volume = volume / 100;
         audioElement.current.muted = isVolumeClicked;
@@ -84,8 +101,7 @@ function FooterMusicPlayer({music}) {
         setSeekTime((currTime) / (duration / 100))
     }, [currTime, duration]);
 
-    const dispatch = useDispatch();
-    const {playlists} = useSelector(state => state.musicReducer);
+
 
     useEffect(()=>{
         audioElement.current.onended = ()=> {
@@ -119,32 +135,24 @@ function FooterMusicPlayer({music}) {
         return s.substring(3);
     }
 
-    const useStyle = useContext(ThemeContext);
-
-    const pointer = {
-        cursor: "pointer",
-        color: useStyle.theme
-    };
-
     return (
-        <div className={"footer-player"}>
+        <div style={useStyle.component} className={"footer-player"}>
             <div className="playback">
                 <input className={"playback-completed"}
                        value={seekTime.toString()}
                        onChange={handleSeekChange}
                        type="range"/>
             </div>
-            <div className="curr-music-container">
-                <div className="curr-music-cover">
-                    <Avatar variant="square" src={require("../assets/img/" + img)}
-                            alt={"random-image"}/>
-                </div>
+            <Button variant={"text"}
+                    startIcon={<Avatar variant="square" src={require("../assets/img/" + img)} alt={name}/>}
+                    onClick={handleBannerToggle}
+                    className="curr-music-container">
                 <div className="curr-music-details">
                     <Name name={name} className={"song-name"} length={name.length}/>
                     <Name name={author_name} className={"author-name"}
                           length={author_name.length}/>
                 </div>
-            </div>
+            </Button>
             <div className="playback-controls">
 
                 <ControlsToggleButton style={pointer} type={"repeat"}

@@ -4,6 +4,7 @@ import {Add, Image, MusicNoteTwoTone} from "@material-ui/icons";
 import {Button} from "@material-ui/core";
 import {ThemeContext} from "../../api/Theme";
 import musicDB from "../../db/music";
+
 function AddMusic() {
     const useStyle = useContext(ThemeContext);
     const fileRef = useRef();
@@ -39,7 +40,7 @@ function AddMusic() {
                 <div className="d2">
                     <div>
                         <input type="text" value={"ID: "+id} disabled/>
-                        <input type="text" placeholder={"MusicCardLong Name"} id={"name"}/>
+                        <input type="text" placeholder={"CurrentPlayingLarge Name"} id={"name"}/>
                         <input type="text" placeholder={"Singer Name"} id={"artist"}/>
                         <Button  style={{backgroundColor: useStyle.theme}} variant={"contained"} endIcon={<Add/>}>
                             Add

@@ -64,8 +64,8 @@ let musicDB = [
   },
   {
     id:7,
-    name: "I Can’t Get Enough (benny blanco, Selena Gomez, J Balvin, Tainy)",
-    author_name: "benny blanco",
+    name: "I Can’t Get Enough",
+    author_name: "benny blanco, Selena Gomez, J Balvin, Tainy",
     img: "i_cant_get_enough.jpg",
     lang: "ENGLISH",
     timesPlayed:0,

@@ -3,6 +3,7 @@ import '../assets/scss/Profile.scss';
 import {Avatar} from "@material-ui/core";
 import MusicCard from "./MusicCard";
 import musicDB from "../../db/music";
+
 function Profile() {
 
     return (

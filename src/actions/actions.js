@@ -10,3 +10,9 @@ export const setCurrentPlaying = (curr_music) => {
         payload: curr_music
     };
 }
+export const setBannerOpen = (isOpen) => {
+    return {
+        type:"SET_BANNER_OPEN",
+        payload:isOpen
+    };
+};

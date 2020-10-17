@@ -1,6 +1,7 @@
 export const initialState = {
     playlists: [],
     playing:null,
+    bannerOpen: false
 };
 const musicReducer = (state=initialState,action) => {
     switch (action.type){
@@ -14,6 +15,11 @@ const musicReducer = (state=initialState,action) => {
                 ...state,
                 playing: action.payload
             }
+        case "SET_BANNER_OPEN":
+            return {
+                ...state,
+                bannerOpen: action.payload
+            };
         default:
             return state;
     }

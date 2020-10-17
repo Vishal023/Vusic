@@ -22,14 +22,10 @@ function SideBar() {
                 <div className={"playlist"}>
                     <p className={"p1"}>MY PLAYLIST</p>
                     <div className={"list-cont"}>
-                        <HoverButton variant={"text"} text={"playlist 1"}/>
-                        <HoverButton variant={"text"} text={"playlist 2"}/>
-                        <HoverButton variant={"text"} text={"playlist 3"}/>
-                        <HoverButton variant={"text"} text={"playlist 4"}/>
-                        <HoverButton variant={"text"} text={"playlist 5"}/>
-                        <HoverButton variant={"text"} text={"playlist 6"}/>
-                        <HoverButton variant={"text"} text={"playlist 7"}/>
-                        <HoverButton variant={"text"} text={"playlist 8"}/>
+                        <HoverButton variant={"text"} text={"All"}/>
+                        <HoverButton variant={"text"} text={"English"}/>
+                        <HoverButton variant={"text"} text={"Hindi"}/>
+                        <HoverButton variant={"text"} text={"Other"}/>
                     </div>
                 </div>
             </div>

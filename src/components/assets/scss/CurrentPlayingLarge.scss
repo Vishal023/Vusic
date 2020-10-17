@@ -1,0 +1,42 @@
+.CurrentPlayingLarge{
+  height: 90vh;
+  display: flex;
+  .music-left{
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+    }
+    .music-cover{
+      border: 7px inset #e0e0e0;
+      width: 100%;
+      max-width: 400px;
+    }
+    .detail{
+      padding: 10px;
+      background-color: #ffffff;
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}
+.banner{
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  filter: brightness(0.3);
+}
+
+@media only screen and (max-width: 970px) {
+  .CurrentPlayingLarge{
+    height: 80vh;
+  }
+}
