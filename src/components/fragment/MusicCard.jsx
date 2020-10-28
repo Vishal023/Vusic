@@ -24,7 +24,9 @@ function MusicCard(props) {
         <div onClick={handlePlay} className={"music-card"}>
             <div className={"music-card-cover"} onMouseOver={handleResponse}>
                 <img src={require("../assets/img/" + img)} alt={name}/>
-                <PlayCircleFilledWhiteIcon className={"play-circle"}/>
+                <div className="play-circle">
+                    <PlayCircleFilledWhiteIcon/>
+                </div>
             </div>
             <React.Fragment>
                 <Name name={name} className={"song-name"} length={name.length}/>

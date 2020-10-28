@@ -1,6 +1,7 @@
 import React from "react";
 import HeadPhone from '../assets/img/headphones.svg';
 import './css/Login.scss';
+import {Link} from "react-router-dom";
 class Login extends React.Component{
     render() {
         return(
@@ -15,7 +16,9 @@ class Login extends React.Component{
                         <div className="main-row-text">
                             <h1>Music for everyone</h1>
                             <p>Without music, life would be a mistake</p>
-                            <a href={"/home"} type="button" className="btn">Start Listening</a>
+                            <Link to={"/home"} className="btn">
+                                Start Listening
+                            </Link>
                         </div>
                     </div>
             </section>

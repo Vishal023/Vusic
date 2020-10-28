@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import '../assets/scss/HoverButton.scss';
 import {Button} from "@material-ui/core";
 import {ThemeContext} from "../../api/Theme";
+import {Link} from "react-router-dom";
 
 function HoverButton({text,variant}) {
     const useStyle = useContext(ThemeContext);
@@ -13,12 +14,13 @@ function HoverButton({text,variant}) {
         setCurrStyle(null)
     };
     return (
-        <Button href={"/home/" + text.toLowerCase()} style={currStyle}
-                onMouseOver={handleOver} onMouseOut={handleOut}
-                variant={variant}
-                className={"hb"}>
-            {text}
-        </Button>
+        <Link to={"/home/"+text.toLowerCase()} className={"hb"}>
+            <Button style={currStyle}
+                    variant={variant}
+                    onMouseOver={handleOver} onMouseOut={handleOut}>
+                {text}
+            </Button>
+        </Link>
     );
 }
 

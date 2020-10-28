@@ -4,7 +4,7 @@ import '../assets/scss/Name.scss';
 function Name({className,length,name}) {
     return (
         <p className={className}>
-            { length > 12 ? name.substring(0,12)+"..." : name}
+            { length > 12 ? name.substring(0,20)+"..." : name}
         </p>
     );
 }

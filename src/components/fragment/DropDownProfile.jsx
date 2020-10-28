@@ -8,7 +8,7 @@ const DropDownProfile = () => {
     return (
         <div style={useStyle.component} className="dropdown-profile">
             <HoverButton variant={"text"} text={"Profile"}/>
-            <HoverButton variant={"text"} text={"Settings"}/>
+            {/*<HoverButton variant={"text"} text={"Settings"}/>*/}
         </div>
     );
 }

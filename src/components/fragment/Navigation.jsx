@@ -34,8 +34,8 @@ function Navigation() {
             <Brand/>
             <div className={"navigation"}>
                 <NavigationButton href={"/home"} name={"Home"}/>
-                <NavigationButton href={"/browse"} name={"Browse"}/>
-                <NavigationButton href={"/add"} name={"Add"}/>
+                <NavigationButton href={"/home/browse"} name={"Browse"}/>
+                <NavigationButton href={"/home/add"} name={"Add"}/>
             </div>
             <SearchBar/>
             <div style={pointer} className={"language"} onClick={handleOpenLanguageList}>

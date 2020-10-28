@@ -1,4 +1,98 @@
 let musicDB = [
+    {
+        id: 0,
+        name: "Shakedown",
+        author_name: "Clarx",
+        img: "shakedown.jpg",
+        lang: "ENGLISH",
+        timesPlayed: 0,
+        musicName: "Clarx - Shakedown [NCS Release].mp3",
+        attribution: "Song: Clarx - Shakedown [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/Shakedown\nWatch: http://youtu.be/qJT0mc3q6Lg"
+    },
+    {
+        id: 1,
+        name: "Games Worldbeat",
+        author_name: "Bernardo R.",
+        img: "notAvailable.jpg",
+        lang: null,
+        timesPlayed: 0,
+        musicName: "mixkit-games-worldbeat-466.mp3",
+        attribution: "mixkit"
+    },
+    {
+        id: 2,
+        name: "OverMyHead",
+        author_name: " ROY KNOX",
+        img: "over-my-head-1602154826-mOiKzOJDe6.jpg",
+        lang: "ENGLISH",
+        timesPlayed: 0,
+        musicName: "ROY KNOX -  Over My Head (Feat. Mike Robert) [NCS Release].mp3",
+        attribution: "Song: ROY KNOX - Over My Head (Feat. Mike Robert) [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/OverMyHead\nWatch: http://youtu.be/"
+    },
+    {
+        id: 3,
+        name: "Want You (feat. Sara Skinner)",
+        author_name: "Subtact, Sara Skinner",
+        img: "want-you-feat-sara-skinner-1586956276-s4lOrfrHQj.jpg",
+        lang: "ENGLISH",
+        timesPlayed: 0,
+        musicName: "Subtact - Want You (feat. Sara Skinner) [NCS Release].mp3",
+        attribution: "Song: Subtact - Want You (feat. Sara Skinner) [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/WantYou\nWatch: http://youtu.be/Pww31vN_1QY"
+    },
+    {
+        id: 4,
+        name: "Apocalypse",
+        author_name: "Midranger",
+        img: "apocalypse-1600776027-tsCmgK4gEU.jpg",
+        lang: "ENGLISH",
+        timesPlayed: 0,
+        musicName: "Midranger - Apocalypse [NCS Release].mp3",
+        attribution: "Song: Midranger - Apocalypse [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://NCS.io/Apocalypse\nWatch: http://youtu.be/Whw1sWDpAvE"
+    },
+    {
+        id: 5,
+        name: "Alive",
+        author_name: "Neoni, N3WPORT",
+        img: "alive.jpg",
+        lang: "ENGLISH",
+        timesPlayed: 0,
+        musicName: "N3WPORT - Alive (feat. Neoni) [NCS Release].mp3",
+        attribution: "Song: N3WPORT - Alive (feat. Neoni) [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/NAlive\nWatch: http://youtu.be/vJAcXd_UtWQ"
+    },
+    {
+        id: 6,
+        name: "Impact Moderato",
+        author_name: "Kevin MacLeod",
+        img: "notAvailable.jpg",
+        lang: "ENGLISH",
+        timesPlayed: 0,
+        musicName: "impact.mp3",
+        attribution: "None"
+    },
+    {
+        id: 7,
+        name: "Impact Moderato 2",
+        author_name: "Kevin MacLeod",
+        img: "notAvailable.jpg",
+        lang: "ENGLISH",
+        timesPlayed: 0,
+        musicName: "impact2.mp3",
+        attribution: "None"
+    },
+    {
+        id: 8,
+        name: "Ignite",
+        author_name: "Tom wilson, Heuse",
+        img: "ignite-1600419626-nHn4WXY79q.jpg",
+        lang: "ENGLISH",
+        timesPlayed: 0,
+        musicName: "Heuse & Tom Wilson - Ignite [NCS Release].mp3",
+        attribution: "Song: Heuse & Tom Wilson - Ignite [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://NCS.io/Ignite\nWatch: http://youtu.be/zbqgv0mMfwk"
+    }
+];
+
+export default musicDB;
+/*let musicDB = [
   {
     id:0,
     name:"Left Foot Up Right Foot Slide",
@@ -260,6 +354,5 @@ let musicDB = [
     timesPlayed:0,
     musicName:"i_dont_care.mp3"
   }
-];
-
-export default musicDB;
+]
+export default musicDB;*/
