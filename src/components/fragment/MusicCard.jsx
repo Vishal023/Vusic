@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../assets/scss/MusicCard.scss';
 import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
 import {useDispatch} from "react-redux";
-import {setCurrentPlaying} from "../../actions/actions";
+import {increaseTimesPlayed, setCurrentPlaying} from "../../actions/actions";
 import Name from "./Name";
 
 function MusicCard(props) {
@@ -18,6 +18,7 @@ function MusicCard(props) {
 
     function handlePlay() {
         dispatch(setCurrentPlaying(props.music))
+        dispatch(increaseTimesPlayed(props.music.id));
     }
 
     return (

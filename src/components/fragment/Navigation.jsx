@@ -33,9 +33,9 @@ function Navigation() {
         <nav style={useStyle.component}>
             <Brand/>
             <div className={"navigation"}>
-                <NavigationButton href={"/home"} name={"Home"}/>
-                <NavigationButton href={"/home/browse"} name={"Browse"}/>
-                <NavigationButton href={"/home/add"} name={"Add"}/>
+                {/*<NavigationButton href={"/home"} name={"Home"}/>
+                <NavigationButton href={"/home/browse"} name={"Browse"}/>*/}
+                {/*<NavigationButton href={"/home/add"} name={"Add"}/>*/}
             </div>
             <SearchBar/>
             <div style={pointer} className={"language"} onClick={handleOpenLanguageList}>

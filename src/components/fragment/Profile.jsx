@@ -1,10 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import '../assets/scss/Profile.scss';
 import {Avatar} from "@material-ui/core";
 import MusicCard from "./MusicCard";
+import {useSelector} from "react-redux";
 import musicDB from "../../db/music";
-
 function Profile() {
+
+    const {playlists} = useSelector(state => state.musicReducer);
+    const [mostPlayed,setMostPlayed] = useState([]);
+    function sortByProperty(property){
+        return function(a,b){
+            if(a[property] > b[property])
+                return 1;
+            else if(a[property] < b[property])
+                return -1;
+
+            return 0;
+        }
+    }
+    useEffect(()=>{
+        let x = playlists;
+        setMostPlayed(x.sort(sortByProperty("timesPlayed")));
+    },[]);
 
     return (
         <div className={"gradient-wrap Profile"}>
@@ -22,8 +39,8 @@ function Profile() {
                     <h3>Most Played</h3>
                     <div className="most-played">
                         {
-                            musicDB.map(item => (
-                                <MusicCard key={item.id} music={item}/>
+                            mostPlayed.map((item, index) => (
+                                index<=4 && <MusicCard key={item.id} music={item}/>
                             ))
                         }
                     </div>

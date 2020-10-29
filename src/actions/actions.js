@@ -16,3 +16,10 @@ export const setBannerOpen = (isOpen) => {
         payload:isOpen
     };
 };
+
+export const increaseTimesPlayed = (id) => {
+    return {
+        type:"INC_TIMES_PLAYED",
+        payload: id
+    };
+};
