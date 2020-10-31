@@ -26,7 +26,7 @@ function Profile() {
     return (
         <div className={"gradient-wrap Profile"}>
             <div className="top-profile">
-                <Avatar src={require("../assets/img/avatar.jpg")} style={{width: "200px", height: "200px"}}>
+                <Avatar src={require("../assets/img/avatar.jpg").default} style={{width: "200px", height: "200px"}}>
                     VS
                 </Avatar>
                 <div className="profile-detail">

@@ -12,10 +12,10 @@ function CurrentPlayingLarge() {
 
     return (
         <div  className={"CurrentPlayingLarge"}>
-            <img className={"banner"} src={require("../assets/img/"+img)} alt=""/>
+            <img className={"banner"} src={require("../assets/img/"+img).default} alt=""/>
             <div className="music-left">
                 <div className="wrapper">
-                    <img className={"music-cover"} src={require("../assets/img/"+img)} alt=""/>
+                    <img className={"music-cover"} src={require("../assets/img/"+img).default} alt=""/>
                     <div className="detail">
                         <h3>{name}</h3>
                         <p>{author_name}</p>
