@@ -23,3 +23,17 @@ export const increaseTimesPlayed = (id) => {
         payload: id
     };
 };
+
+export const setSearch = (searchQuery) => {
+    return {
+        type:"SET_SEARCH_QUERY",
+        payload: searchQuery
+    };
+};
+
+export const setMusicLang = (langList) => {
+    return {
+        type:"SET_MUSIC_LIST",
+        payload: langList
+    };
+};
