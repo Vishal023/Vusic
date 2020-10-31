@@ -1,14 +1,12 @@
 .Profile{
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  background-color: #e0e0e0;
   .top-profile{
     padding: 10px;
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     border-bottom: 1px solid #b0b0b0;
@@ -18,11 +16,13 @@
     .profile-detail{
       padding-left: 30px;
       h3{
-        font-weight: lighter;
-        font-size: 5rem;
+        font-weight: 600;
+        font-size: 4rem;
       }
       p{
         font-size: 1.1rem;
+        font-weight: lighter;
+        color: grey;
       }
     }
   }

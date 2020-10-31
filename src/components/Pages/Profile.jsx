@@ -20,20 +20,22 @@ function Profile() {
         }
     }
     useEffect(()=>{
-        let x = playlists;
-        setMostPlayed(x.sort(sortByProperty("timesPlayed")));
+        setMostPlayed(playlists.sort(sortByProperty("timesPlayed")));
     },[playlists]);
 
     return (
         <Container>
-            <div className={"gradient-wrap Profile"}>
+            <div className={"Profile"}>
                 <div className="top-profile">
-                    <Avatar src={require("../assets/img/avatar.jpg").default} style={{width: "200px", height: "200px"}}>
+                    <Avatar variant={"rounded"} src={require("../assets/img/avatar.jpg").default} style={{width: "150px", height: "150px"}}>
                         VS
                     </Avatar>
                     <div className="profile-detail">
                         <h3>Vishal Singh</h3>
                         <p>2 Public Playlists | 1 Private Playlist | 1 Follower</p>
+                    </div>
+                    <div>
+
                     </div>
                 </div>
                 <div className="bottom-profile">
