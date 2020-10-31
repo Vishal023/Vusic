@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  overflow-y: auto;
 }
 @media only screen and (max-width: 970px) {
   .music-card-container {

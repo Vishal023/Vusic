@@ -3,7 +3,7 @@
   padding: 0;
   position: relative;
   margin: 0 50px;
-  transition: margin .5s ease-in-out;
+  transition: margin .15s ease-in-out;
   .search-container{
     padding: 0;
     background-color: #fff;
@@ -36,6 +36,8 @@
   .search-icon{
     position: absolute;
     left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   p{
     color: grey;

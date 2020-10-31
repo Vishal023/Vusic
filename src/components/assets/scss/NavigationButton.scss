@@ -1,7 +1,11 @@
-.Nav-btn{
-    padding-right: 10px;
-    font-size: 1.1rem;
+.Nav-btn {
+  padding-right: 10px;
+  font-size: 1.1rem;
+  transition: color .15s ease-in-out;
 }
-.Nav-btn:hover{
-  transform: scale(1.1);
+
+.Nav-btn:hover {
+  color: #07689f !important;
+  transform: scale(1.05);
+  text-decoration: underline #333;
 }

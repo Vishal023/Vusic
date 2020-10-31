@@ -6,4 +6,9 @@
   border-radius: 0 0 10px 10px;
   border: 1px solid #e0e0e0;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  .MuiSvgIcon-root{
+    color: #07689f;
+  }
 }

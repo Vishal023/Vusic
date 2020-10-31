@@ -2,6 +2,9 @@ import React, {useEffect, useRef, useState} from "react";
 import SearchSharpIcon from "@material-ui/icons/SearchSharp";
 import CancelIcon from "@material-ui/icons/Cancel";
 import '../assets/scss/SearchBar.scss';
+import {useDispatch} from "react-redux";
+import {setSearch} from "../../actions/actions";
+import {Link} from "react-router-dom";
 
 const SearchBar = () => {
     const [isSearchBarOpen, setSearchBarOpen] = useState(false);
@@ -13,18 +16,29 @@ const SearchBar = () => {
         setSearchQuery(e.target.value);
     };
     const searchRef = useRef();
-    useEffect(()=>{
-        if (isSearchBarOpen === true){
+    useEffect(() => {
+        if (isSearchBarOpen === true) {
             searchRef.current.focus();
         }
     });
+
+    const dispatch = useDispatch();
+    const searchLink = useRef();
+    const handleSearch = (e) => {
+        e.preventDefault();
+        dispatch(setSearch(searchQuery));
+        if (searchQuery !== "")
+            searchLink.current.click();
+    };
+
     return (
-        <div className={`${isSearchBarOpen ? "SearchBar  open":"SearchBar"}`}>
-            <div className={"search-container"}>
+        <div className={`${isSearchBarOpen ? "SearchBar  open" : "SearchBar"}`}>
+            <form onSubmit={handleSearch} className={"search-container"}>
                 {
                     isSearchBarOpen &&
                     <>
-                        <SearchSharpIcon  style={{color: "grey"}} className="search-icon" fontSize="small"/>
+                        <Link to={"/home/search"} ref={searchLink}/>
+                        <SearchSharpIcon style={{color: "grey"}} className="search-icon" fontSize="small"/>
                         <input id={"search-input"}
                                name={"searchQuery"}
                                value={searchQuery}
@@ -35,7 +49,7 @@ const SearchBar = () => {
                         />
                     </>
                 }
-            </div>
+            </form>
             {
                 !isSearchBarOpen &&
                 <div className={"SearchBar-customPlaceholderOpen"}

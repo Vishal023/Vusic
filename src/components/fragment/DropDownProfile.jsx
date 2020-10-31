@@ -2,13 +2,14 @@ import React, {useContext} from "react";
 import '../assets/scss/DropDownProfile.scss';
 import {ThemeContext} from "../../api/Theme";
 import HoverButton from "./HoverButton";
+import {AccountBox, Settings} from "@material-ui/icons";
 
 const DropDownProfile = () => {
     const useStyle = useContext(ThemeContext);
     return (
         <div style={useStyle.component} className="dropdown-profile">
-            <HoverButton variant={"text"} text={"Profile"}/>
-            {/*<HoverButton variant={"text"} text={"Settings"}/>*/}
+            <HoverButton Icon={AccountBox} variant={"text"} text={"Profile"}/>
+            <HoverButton Icon={Settings} variant={"text"} text={"Settings"}/>
         </div>
     );
 }

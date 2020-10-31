@@ -4,7 +4,7 @@ import {Button} from "@material-ui/core";
 import {ThemeContext} from "../../api/Theme";
 import {Link} from "react-router-dom";
 
-function HoverButton({text,variant}) {
+function HoverButton({text,variant,Icon}) {
     const useStyle = useContext(ThemeContext);
     const [currStyle, setCurrStyle] = useState(null);
     const handleOver = () => {
@@ -16,7 +16,8 @@ function HoverButton({text,variant}) {
     return (
         <Link to={"/home/"+text.toLowerCase()} className={"hb"}>
             <Button style={currStyle}
-                    variant={variant}
+                    startIcon={Icon?<Icon/>:null}
+                    variant={variant}   
                     onMouseOver={handleOver} onMouseOut={handleOut}>
                 {text}
             </Button>

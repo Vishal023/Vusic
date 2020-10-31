@@ -5,16 +5,24 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Login from "../components/Pages/Login";
 import {ThemeContext, themes} from "../api/Theme";
 import musicDB from "../db/music";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {setPlaylist} from "../actions/actions";
 
 const App = () => {
 
+    const {language} = useSelector(state => state.musicReducer);
 
     const dispatch = useDispatch();
     useEffect(()=>{
-        dispatch(setPlaylist(musicDB))
-    },[dispatch]);
+        if (language === null){
+            dispatch(setPlaylist(musicDB))
+        }else {
+            let x = musicDB.filter((item)=>(
+                item.lang && language.includes(item.lang.toLowerCase())
+            ))
+            dispatch(setPlaylist(x))
+        }
+    },[dispatch, language]);
 
 
     return (
