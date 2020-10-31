@@ -3,7 +3,6 @@ import '../assets/scss/Profile.scss';
 import {Avatar} from "@material-ui/core";
 import MusicCard from "./MusicCard";
 import {useSelector} from "react-redux";
-import musicDB from "../../db/music";
 function Profile() {
 
     const {playlists} = useSelector(state => state.musicReducer);
@@ -21,12 +20,12 @@ function Profile() {
     useEffect(()=>{
         let x = playlists;
         setMostPlayed(x.sort(sortByProperty("timesPlayed")));
-    },[]);
+    },[playlists]);
 
     return (
         <div className={"gradient-wrap Profile"}>
             <div className="top-profile">
-                <Avatar src={require("../assets/img/avatar.jpg").default} style={{width: "200px", height: "200px"}}>
+                <Avatar src={require("../assets/img/avatar.jpg")} style={{width: "200px", height: "200px"}}>
                     VS
                 </Avatar>
                 <div className="profile-detail">
