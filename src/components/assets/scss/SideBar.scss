@@ -5,43 +5,38 @@
   height: 80vh;
   overflow: auto;
   border-right: 1px solid #e0e0e0;
-  .library-container{
-    display: flex;
-    flex-flow:column;
-    width: 100%;
-    padding: 15px 15px 15px 5px;
-    .lib-sub{
-      padding: 10px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
+  .p1 {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    user-select: none;
+/*    display: flex;
+    align-items: center;
+    justify-content: space-between;*/
   }
-  .playlist-container{
-    flex: 1;
-    width: 100%;
+  .lib-sub {
+    padding: 10px;
+    margin: 5px;
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 10px 10px 10px 5px;
-    .playlist{
-      display: flex;
-      flex: 1;
-      flex-flow: column wrap;
-      .p1{
-        padding: 0 15px;
-        font-weight: bolder;
-        font-size: 1.3rem;
-      }
-      .list-cont{
-        padding: 15px;
-        .MuiButton-label{
-          justify-content: flex-start;
-        }
-      }
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .aside-bar-container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: 6px;
+  }
+  .playlist{
+    flex: 1;
+    .lib-sub:hover{
+      background-color: #a2d5f2;
     }
   }
 }
+
 @media only screen and (max-width: 970px) {
   .aside-bar {
     display: none;
