@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "name": "vusic",
+  "homepage": "http://vusic.techstore.dev/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
