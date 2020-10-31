@@ -1,5 +1,6 @@
 .Container{
   height: 80vh;
+  overflow-y: auto;
   >div{
     height: 100%;
   }
