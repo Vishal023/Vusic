@@ -3,7 +3,9 @@ import musicDB from "../db/music";
 export const initialState = {
     playlists: musicDB,
     playing:null,
-    bannerOpen: false
+    bannerOpen: false,
+    search:null,
+    language: null
 };
 const musicReducer = (state=initialState,action) => {
     switch (action.type){
@@ -24,6 +26,17 @@ const musicReducer = (state=initialState,action) => {
             };
         case "INC_TIMES_PLAYED":
             musicDB[action.payload].timesPlayed += 1;
+            return state;
+        case "SET_SEARCH_QUERY":
+            return {
+                ...state,
+                search: action.payload
+            };
+        case "SET_MUSIC_LIST":
+            return {
+                ...state,
+                language: action.payload
+            };
         default:
             return state;
     }
