@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import '../assets/scss/Profile.scss';
+import './css/Profile.scss';
 import {Avatar} from "@material-ui/core";
-import MusicCard from "./MusicCard";
 import {useSelector} from "react-redux";
+import MusicCard from "../fragment/MusicCard";
+import Container from "../fragment/Container";
+
 function Profile() {
 
     const {playlists} = useSelector(state => state.musicReducer);
@@ -23,29 +25,31 @@ function Profile() {
     },[playlists]);
 
     return (
-        <div className={"gradient-wrap Profile"}>
-            <div className="top-profile">
-                <Avatar src={require("../assets/img/avatar.jpg").default} style={{width: "200px", height: "200px"}}>
-                    VS
-                </Avatar>
-                <div className="profile-detail">
-                    <h3>Vishal Singh</h3>
-                    <p>2 Public Playlists | 1 Private Playlist | 1 Follower</p>
+        <Container>
+            <div className={"gradient-wrap Profile"}>
+                <div className="top-profile">
+                    <Avatar src={require("../assets/img/avatar.jpg").default} style={{width: "200px", height: "200px"}}>
+                        VS
+                    </Avatar>
+                    <div className="profile-detail">
+                        <h3>Vishal Singh</h3>
+                        <p>2 Public Playlists | 1 Private Playlist | 1 Follower</p>
+                    </div>
                 </div>
-            </div>
-            <div className="bottom-profile">
-                <div>
-                    <h3>Most Played</h3>
-                    <div className="most-played">
-                        {
-                            mostPlayed.map((item, index) => (
-                                index<=4 && <MusicCard key={item.id} music={item}/>
-                            ))
-                        }
+                <div className="bottom-profile">
+                    <div>
+                        <h3>Most Played</h3>
+                        <div className="most-played">
+                            {
+                                mostPlayed.map((item, index) => (
+                                    index<=4 && <MusicCard key={item.id} music={item}/>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     );
 }
 

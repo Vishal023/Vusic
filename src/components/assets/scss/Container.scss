@@ -1,0 +1,11 @@
+.Container{
+  height: 80vh;
+  >div{
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .Container {
+    height: 70vh;
+  }
+}

@@ -1,14 +1,44 @@
 .bottom-navigation{
-   height: 10vh;
-   display: flex;
-   div{
-     height: 10vh;
-     flex-grow: 1;
-     svg{
-       font-size: 1.9rem;
-     }
-   }
- }
+  height: 10vh;
+  display: flex;
+  .bottom-navigation-link{
+    position: relative;
+    width: 100%;
+    background-color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .BottomNavAction{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .label{
+      display: none;
+      z-index: 1000;
+      position: absolute;
+      bottom: 5px;
+      color: #07689f;
+    }
+    .active{
+      color: #07689f;
+    }
+    .active+.label{
+        display: block;
+    }
+  }
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 320px){
   .bottom-navigation{
     div{
@@ -19,4 +49,3 @@
     }
   }
 }
-

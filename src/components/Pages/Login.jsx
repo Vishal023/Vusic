@@ -2,6 +2,7 @@ import React from "react";
 import HeadPhone from '../assets/img/headphones.svg';
 import './css/Login.scss';
 import {Link} from "react-router-dom";
+
 class Login extends React.Component{
     render() {
         return(

@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: 80vh;
   background-color: #e0e0e0;
   .top-profile{
     padding: 10px;
@@ -42,11 +41,6 @@
       flex-wrap: wrap;
       justify-content: flex-start;
     }
-  }
-}
-@media only screen and (max-width: 970px) {
-  .Profile {
-    height: 70vh;
   }
 }
 @media only screen and (max-width: 580px) {
