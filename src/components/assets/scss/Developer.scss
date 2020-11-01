@@ -74,33 +74,33 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
 
-        button {
+        a {
           padding: 15px;
           color: white;
           text-transform: lowercase;
         }
 
-        button:hover {
+        a:hover {
           opacity: 0.8;
         }
 
-        button:nth-child(1) {
+        a:nth-child(1) {
           background: #3B5998;
         }
 
-        button:nth-child(2) {
+        a:nth-child(2) {
           background: #55ACEE;
         }
 
-        button:nth-child(3) {
+        a:nth-child(3) {
           background: #125688;
         }
 
-        button:nth-child(4) {
+        a:nth-child(4) {
           background: #007bb5;
         }
 
-        button:nth-child(5) {
+        a:nth-child(5) {
           background: #e74e6d;
         }
       }

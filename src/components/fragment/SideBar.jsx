@@ -7,7 +7,7 @@ import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import SideBarOptions from "./SideBarOptions";
 import {ThemeContext} from "../../api/Theme";
 import HoverButton from "./HoverButton";
-import {Add, Explore, HomeOutlined, HomeSharp, PlaylistPlay} from "@material-ui/icons";
+import {Add, Explore, ExploreOutlined, HomeOutlined, HomeSharp, PlaylistPlay} from "@material-ui/icons";
 import {Button} from "@material-ui/core";
 
 function SideBar() {
@@ -15,8 +15,8 @@ function SideBar() {
     return (
         <aside style={useStyle.component} className={"aside-bar"}>
             <div className="aside-bar-container">
-                <SideBarOptions className={"lib-sub"} Icon={HomeSharp} title={"Home"} />
-                <SideBarOptions className={"lib-sub"} Icon={Explore} title={"About"}/>
+                <SideBarOptions className={"lib-sub"} Icon={HomeOutlined} title={"Home"} />
+                <SideBarOptions className={"lib-sub"} Icon={ExploreOutlined} title={"About"}/>
                 <SideBarOptions className={"lib-sub"} Icon={AlbumIcon} title={"Album"}/>
                 <SideBarOptions className={"lib-sub"} Icon={EmojiPeopleIcon} title={"Artist"}/>
             </div>

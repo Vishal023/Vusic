@@ -25,19 +25,19 @@ const Developer = () => {
                     <p>I have a keen interest in developing projects, whenever I want to learn something new.</p>
                     <p>And a blogger.</p>
                     <div className="Card-btn">
-                        <IconButton>
+                        <IconButton target={"_blank"}  href={"https://www.facebook.com/vishal.kld"} title={"vishal.kld"}>
                             <Facebook/>
                         </IconButton>
-                        <IconButton>
+                        <IconButton target={"_blank"} href={"https://twitter.com/Vishal_kld"}  title={"Vishal_kld"}>
                             <Twitter/>
                         </IconButton>
-                        <IconButton>
+                        <IconButton target={"_blank"} href={"https://www.linkedin.com/in/vishalsingh-/"}  title={"vishalsingh-"}>
                             <LinkedIn/>
                         </IconButton>
-                        <IconButton>
+                        <IconButton target={"_blank"} href={"https://www.instagram.com/vishalsingh023/"}  title={"vishalsingh023"}>
                             <Instagram/>
                         </IconButton>
-                        <IconButton>
+                        <IconButton target={"_blank"} href={"https://vishal.thetechnician.in/"}  title={"Web Portfolio"}>
                             <Portrait/>
                         </IconButton>
                     </div>
