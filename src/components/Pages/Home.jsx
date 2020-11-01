@@ -14,6 +14,7 @@ import FooterSelectMusic from "../fragment/FooterSelectMusic";
 import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
 import Explore from "./Explore";
+import About from "./About";
 
 function getCurrPage(pathName) {
     switch (pathName) {
@@ -27,6 +28,8 @@ function getCurrPage(pathName) {
             return <Profile/>
         case "/home/add":
             return <AddMusic/>
+        case "/home/about":
+            return <About/>
         default:
             return null
     }
@@ -37,6 +40,13 @@ function Home() {
 
     const [screenSize, setScreenSize] = useState(undefined);
     const [currMusic, setCurrMusic] = useState(null);
+    const [Page,setCurrPage] = useState(<MusicCardContainer/>);
+
+    let pathname = window.location.pathname;
+    useEffect(()=>{
+        setCurrPage(getCurrPage(pathname))
+    }, [pathname]);
+
     window.addEventListener("resize", handleResize);
 
     function handleResize() {
@@ -49,8 +59,7 @@ function Home() {
     });
 
     const useStyle = useContext(ThemeContext);
-    let pathname = window.location.pathname;
-    const {playing,bannerOpen} = useSelector(state => state.musicReducer);
+    const {playing, bannerOpen} = useSelector(state => state.musicReducer);
 
 
     useEffect(() => {
@@ -70,20 +79,24 @@ function Home() {
                 </div>
                 <div className="main-home">
                     {
-                        getCurrPage(pathname)
+                        Page
                     }
                 </div>
             </section>
             {
                 bannerOpen
-                    &&
+                &&
                 <section className="current-large-banner">
                     <CurrentPlayingLarge/>
                 </section>
             }
             <React.Fragment>
                 {
-                    currMusic ? <FooterMusicPlayer music={currMusic}/> : <FooterSelectMusic/>
+                    currMusic
+                        ?
+                        <FooterMusicPlayer music={currMusic}/>
+                        :
+                        <FooterSelectMusic/>
                 }
                 {
                     screenSize <= 970 && <BottomNavigationMobile/>

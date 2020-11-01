@@ -1,5 +1,49 @@
+.Search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .Search-img{
+    img{
+      width: 240px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .Rotate-img{
+      animation-name: spin;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    .Arrow{
+      top: 15%;
+      left: 60%;
+      transform: translateX(-60%) translateY(-50%)  rotate(70deg) ;
+      width: 100px;
+    }
+    @keyframes spin {
+      from {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+      }
+      to {
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
+      }
+    }
+  }
+  h3{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-15%);
+  }
+}
 .Search-result{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
 }

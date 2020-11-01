@@ -37,8 +37,7 @@ function Navigation() {
             <Brand/>
             <div className={"navigation"}>
                 <NavigationButton href={"/home"} name={"Home"}/>
-                <NavigationButton href={"/home"} name={"About"}/>
-                {/*<NavigationButton href={"/home/browse"} name={"Browse"}/>*/}
+                <NavigationButton href={"/home/about"} name={"About"}/>
                 {/*<NavigationButton href={"/home/add"} name={"Add"}/>*/}
             </div>
             <SearchBar/>

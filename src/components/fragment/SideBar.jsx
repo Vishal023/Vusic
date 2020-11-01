@@ -27,10 +27,8 @@ function SideBar() {
                         <Add/>
                     </Button>*/}
                 </p>
-                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} title={"All"}/>
-                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} title={"English"}/>
-                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} title={"Hindi"}/>
-                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} title={"Other"}/>
+                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} title={"Instrumental"}/>
+                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} title={"Electronic"}/>
             </div>
         </aside>
     );

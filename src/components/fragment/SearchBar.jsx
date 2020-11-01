@@ -26,7 +26,7 @@ const SearchBar = () => {
     const searchLink = useRef();
     const handleSearch = (e) => {
         e.preventDefault();
-        dispatch(setSearch(searchQuery));
+        dispatch(setSearch(searchQuery.toLowerCase()));
         if (searchQuery !== "")
             searchLink.current.click();
     };

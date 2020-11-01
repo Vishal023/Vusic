@@ -12,18 +12,14 @@ const DropDownLanguageList = () => {
     const useStyle = useContext(ThemeContext);
 
     const listOfLanguage = [
+        "Any",
         "Hindi",
         "English",
-        "Punjabi",
-        "Tamil",
-        "Telugu"
     ];
     const [selectedList,setSelectedList] = useState({
+        "Any":false,
         "Hindi": false,
         "English": false,
-        "Punjabi": false,
-        "Tamil": false,
-        "Telugu": false
     });
     const handleSelected = (val,selected) => {
         setSelectedList(prevState => {
@@ -47,7 +43,6 @@ const DropDownLanguageList = () => {
     return(
         <div style={useStyle.component} className="dropdown">
             <div className="dropdown-head">
-                <h3>What music do you like?</h3>
                 <p>Pick the language you want to listen to</p>
             </div>
             <div className={"lang-list"}>
