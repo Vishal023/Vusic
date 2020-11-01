@@ -17,7 +17,7 @@
     * ###### [react-redux](https://react-redux.js.org/)
     * ###### [material-ui/core](https://www.npmjs.com/package/@material-ui/core)
     * ###### [material-ui/icons](https://www.npmjs.com/package/@material-ui/icons)
-    * ###### [Context](https://reactjs.org/docs/context.html)
+    * ###### [context API](https://reactjs.org/docs/context.html)
     * ###### [scss](https://sass-lang.com/)
    
 
