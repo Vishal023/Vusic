@@ -21,11 +21,6 @@
     * ###### [scss](https://sass-lang.com/)
    
 
-## WORKING
-
-WATCH THIS VIDEO TO VIEW THE WORKING OF THIS GUI APP
-[VIDEO](https://drive.google.com/open?id=1ExX7HGeQVpdYtISiS8hr09AIQ7QxWZam)
-
 ## Attribution
     
 [Icons](www.flaticon.com) made by Freepikfrom 
