@@ -1,4 +1,7 @@
 .About{
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
   .Dark-mode{
     background-color: #333333;
     color: #ffffff;
