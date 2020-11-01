@@ -6,6 +6,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
 import Button from "@material-ui/core/Button";
 import {Link} from "react-router-dom";
+import {Info, Settings} from "@material-ui/icons";
 
 function BottomNavigationMobile() {
     const [menuItems, setMenuItem] = useState([
@@ -23,15 +24,15 @@ function BottomNavigationMobile() {
         },
         {
             id: 2,
-            icon: <ExploreOutlinedIcon/>,
-            href: "/home/explore",
-            label: "Explore"
-        },
-        {
-            id: 3,
             icon: <AccountCircleOutlinedIcon/>,
             href: "/home/profile",
             label: "Profile"
+        },
+        {
+            id: 3,
+            icon: <ExploreOutlinedIcon/>,
+            href: "/home/about",
+            label: "About"
         }
     ]);
     let currPath = window.location.pathname;

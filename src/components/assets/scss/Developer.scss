@@ -1,0 +1,112 @@
+.Developer {
+  background-color: whitesmoke;
+
+  .Developer-head {
+    text-transform: uppercase;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .Developer-profile {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #bbe1fa;
+    padding: 5px;
+    .Developer-profileCard {
+      background-color: rgba(255, 255, 255, 0.75);
+      text-align: center;
+      flex: 1 1 200px;
+      img {
+        border-radius: 50%;
+        border: 1px solid #000;
+        padding: 2px;
+        width: 200px;
+      }
+      .Card-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #1e56a0;
+        h3, p {
+          padding: 10px;
+          text-transform: uppercase;
+        }
+        h3 {
+          color: white;
+          font-size: 1.3rem;
+        }
+        p{
+          color: gainsboro;
+        }
+      }
+    }
+
+    .Developer-profileDetails {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        color: black;
+        padding: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .Card-btn {
+        background-color: #0267C1;
+        background-color: rgba(255, 255, 255, 0.75);
+        background-color: #a2d5f2;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        button {
+          padding: 15px;
+          color: white;
+          text-transform: lowercase;
+        }
+
+        button:hover {
+          opacity: 0.8;
+        }
+
+        button:nth-child(1) {
+          background: #3B5998;
+        }
+
+        button:nth-child(2) {
+          background: #55ACEE;
+        }
+
+        button:nth-child(3) {
+          background: #125688;
+        }
+
+        button:nth-child(4) {
+          background: #007bb5;
+        }
+
+        button:nth-child(5) {
+          background: #e74e6d;
+        }
+      }
+
+    }
+
+  }
+
+}

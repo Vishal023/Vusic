@@ -13,15 +13,12 @@ import AddMusic from "../fragment/AddMusic";
 import FooterSelectMusic from "../fragment/FooterSelectMusic";
 import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
-import Explore from "./Explore";
 import About from "./About";
 
 function getCurrPage(pathName) {
     switch (pathName) {
         case "/home":
             return <MusicCardContainer/>
-        case "/home/explore":
-            return <Explore/>
         case "/home/search":
             return <Search/>
         case "/home/profile":

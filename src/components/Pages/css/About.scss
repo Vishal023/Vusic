@@ -1,0 +1,16 @@
+.About{
+  .Dark-mode{
+    background-color: #333333;
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    h5{
+      font-size: 1.1rem;
+    }
+    button{
+      color: #ffffff;
+    }
+  }
+}

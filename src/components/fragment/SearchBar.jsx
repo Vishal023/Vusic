@@ -62,7 +62,8 @@ const SearchBar = () => {
                 isSearchBarOpen &&
                 <div className={"SearchBar-customPlaceholderClose"}
                      onClick={handleSearchBarOpen}>
-                    <p>Close&nbsp;</p>
+                    {/*
+                    <p>Close&nbsp;</p>*/}
                     <CancelIcon style={{color: "grey"}} className="cancel" fontSize="small"/>
                 </div>
             }

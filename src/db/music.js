@@ -7,7 +7,12 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         musicName: "Clarx - Shakedown [NCS Release].mp3",
-        attribution: "Song: Clarx - Shakedown [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/Shakedown\nWatch: http://youtu.be/qJT0mc3q6Lg"
+        attribution: {
+            song: "Clarx - Shakedown [NCS Release]",
+            musicBy: "NoCopyrightSounds",
+            download: "http://ncs.io/Shakedown",
+            stream: "http://youtu.be/qJT0mc3q6Lg"
+        }
     },
     {
         id: 1,
@@ -17,7 +22,12 @@ let musicDB = [
         lang: null,
         timesPlayed: 0,
         musicName: "mixkit-games-worldbeat-466.mp3",
-        attribution: "mixkit"
+        attribution: {
+            song: "Games Worldbeat",
+            musicBy: "mixkit",
+            download: null,
+            stream: null
+        }
     },
     {
         id: 2,
@@ -27,7 +37,12 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         musicName: "ROY KNOX -  Over My Head (Feat. Mike Robert) [NCS Release].mp3",
-        attribution: "Song: ROY KNOX - Over My Head (Feat. Mike Robert) [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/OverMyHead\nWatch: http://youtu.be/"
+        attribution: {
+            song: "ROY KNOX - Over My Head (Feat. Mike Robert) [NCS Release]",
+            musicBy: "NoCopyrightSounds",
+            download: "http://ncs.io/OverMyHead",
+            stream: null
+        }
     },
     {
         id: 3,
@@ -37,7 +52,12 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         musicName: "Subtact - Want You (feat. Sara Skinner) [NCS Release].mp3",
-        attribution: "Song: Subtact - Want You (feat. Sara Skinner) [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/WantYou\nWatch: http://youtu.be/Pww31vN_1QY"
+        attribution: {
+            song: "Subtact - Want You (feat. Sara Skinner) [NCS Release]",
+            musicBy: "NoCopyrightSounds",
+            download: "http://ncs.io/WantYou",
+            stream: "http://youtu.be/Pww31vN_1QY"
+        }
     },
     {
         id: 4,
@@ -47,7 +67,12 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         musicName: "Midranger - Apocalypse [NCS Release].mp3",
-        attribution: "Song: Midranger - Apocalypse [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://NCS.io/Apocalypse\nWatch: http://youtu.be/Whw1sWDpAvE"
+        attribution: {
+            song: "Midranger - Apocalypse [NCS Release]",
+            musicBy: "NoCopyrightSounds",
+            download: "http://ncs.io/Apocalypse",
+            stream: "http://youtu.be/Whw1sWDpAvE"
+        }
     },
     {
         id: 5,
@@ -57,7 +82,12 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         musicName: "N3WPORT - Alive (feat. Neoni) [NCS Release].mp3",
-        attribution: "Song: N3WPORT - Alive (feat. Neoni) [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://ncs.io/NAlive\nWatch: http://youtu.be/vJAcXd_UtWQ"
+        attribution: {
+            song: "N3WPORT - Alive (feat. Neoni) [NCS Release]",
+            musicBy: "NoCopyrightSounds",
+            download: "http://ncs.io/NAlive",
+            stream: "http://youtu.be/vJAcXd_UtWQ"
+        }
     },
     {
         id: 6,
@@ -67,7 +97,12 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         musicName: "impact.mp3",
-        attribution: "None"
+        attribution: {
+            song: "Impact Moderato",
+            musicBy: "Kevin MacLeod",
+            download: null,
+            stream: null
+        }
     },
     {
         id: 7,
@@ -77,7 +112,12 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         musicName: "impact2.mp3",
-        attribution: "None"
+        attribution: {
+            song: "Impact Moderato",
+            musicBy: "Kevin MacLeod",
+            download: null,
+            stream: null
+        }
     },
     {
         id: 8,
@@ -87,7 +127,12 @@ let musicDB = [
         lang: "ENGLISH",
         timesPlayed: 0,
         musicName: "Heuse & Tom Wilson - Ignite [NCS Release].mp3",
-        attribution: "Song: Heuse & Tom Wilson - Ignite [NCS Release]\nMusic provided by NoCopyrightSounds\nFree Download/Stream: http://NCS.io/Ignite\nWatch: http://youtu.be/zbqgv0mMfwk"
+        attribution: {
+            song: "Heuse & Tom Wilson - Ignite [NCS Release]",
+            musicBy: "NoCopyrightSounds",
+            download: "http://ncs.io/Ignite",
+            stream: "http://youtu.be/zbqgv0mMfwk"
+        }
     }
 ];
 
