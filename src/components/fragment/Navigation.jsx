@@ -7,7 +7,6 @@ import SearchBar from "./SearchBar";
 import Brand from "./Brand";
 import DropDownProfile from "./DropDownProfile";
 import {Avatar, Button} from "@material-ui/core";
-import NavigationButton from "./NavigationButton";
 import {ThemeContext} from "../../api/Theme";
 
 function Navigation() {

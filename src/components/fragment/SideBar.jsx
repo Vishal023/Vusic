@@ -1,14 +1,10 @@
 import React, {useContext} from "react";
 import "../assets/scss/SideBar.scss";
-import HistoryIcon from '@material-ui/icons/History';
-import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import AlbumIcon from '@material-ui/icons/Album';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import SideBarOptions from "./SideBarOptions";
 import {ThemeContext} from "../../api/Theme";
-import HoverButton from "./HoverButton";
-import {Add, Explore, ExploreOutlined, HomeOutlined, HomeSharp, PlaylistPlay} from "@material-ui/icons";
-import {Button} from "@material-ui/core";
+import {ExploreOutlined, HomeOutlined, PlaylistPlay} from "@material-ui/icons";
 
 function SideBar() {
     const useStyle = useContext(ThemeContext);

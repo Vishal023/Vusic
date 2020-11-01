@@ -1,9 +1,8 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useState} from "react";
 import '../assets/scss/DropDown.scss';
 import Button from "@material-ui/core/Button";
 import LangList from "./LangList";
 import {ThemeContext} from "../../api/Theme";
-import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {setMusicLang} from "../../actions/actions";
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import '../assets/scss/Developer.scss';
-import {Avatar, Button, IconButton} from "@material-ui/core";
+import {IconButton} from "@material-ui/core";
 import AvatarImage from "../assets/img/avatar.jpg";
-import {ArrowForward, ArrowForwardIos, Facebook, Instagram, LinkedIn, Portrait, Twitter} from "@material-ui/icons";
+import {Facebook, Instagram, LinkedIn, Portrait, Twitter} from "@material-ui/icons";
 
 const Developer = () => {
     return (

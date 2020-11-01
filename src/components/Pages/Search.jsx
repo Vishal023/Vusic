@@ -7,6 +7,7 @@ import SearchMusic from "../assets/img/searchMusic.svg";
 import SearchMusicMp3 from "../assets/img/searchMusicMp3.svg";
 import SearchMusicDisc from "../assets/img/searchMusicDisc.svg";
 import ArrowUp from '../assets/img/left.svg';
+
 const Search = () => {
     const {playlists, search} = useSelector(state => state.musicReducer);
     const [searchResult, setSearchResult] = useState([]);

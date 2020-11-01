@@ -16,7 +16,6 @@ import {ThemeContext} from "../../api/Theme";
 import {useDispatch, useSelector} from "react-redux";
 import {setBannerOpen, setCurrentPlaying} from "../../actions/actions";
 import Button from "@material-ui/core/Button";
-import CircularProgress from "@material-ui/core/CircularProgress";
 
 
 function FooterMusicPlayer({music}) {
