@@ -14,6 +14,7 @@ import FooterSelectMusic from "../fragment/FooterSelectMusic";
 import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
 import About from "./About";
+import Playlist from "../fragment/Playlist";
 
 function getCurrPage(pathName) {
     switch (pathName) {
@@ -28,6 +29,9 @@ function getCurrPage(pathName) {
         case "/home/about":
             return <About/>
         default:
+            if (pathName.startsWith("/home/playlist/")){
+                return <Playlist/>
+            }
             return null
     }
 }
@@ -37,10 +41,10 @@ function Home() {
 
     const [screenSize, setScreenSize] = useState(undefined);
     const [currMusic, setCurrMusic] = useState(null);
-    const [Page,setCurrPage] = useState(<MusicCardContainer/>);
+    const [Page, setCurrPage] = useState(<MusicCardContainer/>);
 
     let pathname = window.location.pathname;
-    useEffect(()=>{
+    useEffect(() => {
         setCurrPage(getCurrPage(pathname))
     }, [pathname]);
 

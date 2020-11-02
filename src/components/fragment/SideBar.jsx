@@ -11,10 +11,10 @@ function SideBar() {
     return (
         <aside style={useStyle.component} className={"aside-bar"}>
             <div className="aside-bar-container">
-                <SideBarOptions className={"lib-sub"} Icon={HomeOutlined} title={"Home"} />
-                <SideBarOptions className={"lib-sub"} Icon={ExploreOutlined} title={"About"}/>
-                <SideBarOptions className={"lib-sub"} Icon={AlbumIcon} title={"Album"}/>
-                <SideBarOptions className={"lib-sub"} Icon={EmojiPeopleIcon} title={"Artist"}/>
+                <SideBarOptions className={"lib-sub"} Icon={HomeOutlined} href={"/home"} title={"Home"} />
+                <SideBarOptions className={"lib-sub"} Icon={ExploreOutlined} href={"/home/about"}  title={"About"}/>
+                {/*<SideBarOptions className={"lib-sub"} Icon={AlbumIcon} href={"/home/album"}  title={"Album"}/>
+                <SideBarOptions className={"lib-sub"} Icon={EmojiPeopleIcon} href={"/home/artist"}  title={"Artist"}/>*/}
             </div>
             <div className="aside-bar-container playlist">
                 <p className={"p1"}>
@@ -23,8 +23,8 @@ function SideBar() {
                         <Add/>
                     </Button>*/}
                 </p>
-                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} title={"Instrumental"}/>
-                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} title={"Electronic"}/>
+                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} href={"/home/playlist/instrumental"}  title={"Instrumental"}/>
+                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} href={"/home/playlist/electronic"}  title={"Electronic"}/>
             </div>
         </aside>
     );

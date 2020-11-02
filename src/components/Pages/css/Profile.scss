@@ -2,19 +2,27 @@
   display: flex;
   flex-direction: column;
   .top-profile{
-    padding: 10px;
-    flex: 1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid gainsboro;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: center;
-    border-bottom: 1px solid #b0b0b0;
+    align-items: center;
+    justify-content: flex-start;
     .MuiAvatar-root{
       box-shadow: 0 4px 15px rgba(0,0,0,.5);;
     }
     .profile-detail{
-      padding-left: 30px;
+      padding: 10px;
+      margin: 10px;
+      background-color: #f1f1f1;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
       h3{
         font-weight: 600;
         font-size: 4rem;
@@ -31,7 +39,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    overflow: auto;
+
     h3{
       padding-left: 10px;
       font-size: 1.5rem;
@@ -40,8 +49,27 @@
     .most-played{
       display: flex;
       flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+}
+.profile-playlist{
+  display: none;
+}
+@media only screen and (max-width: 970px) {
+  .Profile{
+    .top-profile{
       justify-content: center;
     }
+    .bottom-profile {
+      text-align: center;
+      .most-played{
+        justify-content: center;
+      }
+    }
+  }
+  .profile-playlist{
+    display: block;
   }
 }
 @media only screen and (max-width: 580px) {

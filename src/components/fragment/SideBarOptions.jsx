@@ -7,15 +7,10 @@ function SideBarOptions(props) {
     const title = props.title;
     const className = props.className;
     const sideBarRef = useRef();
+    const href = props.href;
     return (
         <Button onClick={()=>{sideBarRef.current.click();}} className={className} startIcon={Icon && <Icon/>}>
-            {
-                title === "Home"
-                    ?
-                    <Link ref={sideBarRef} to={"/" + title.toLowerCase()}/>
-                    :
-                    <Link ref={sideBarRef} to={"/home/" + title.toLowerCase()}/>
-            }
+            <Link ref={sideBarRef} to={href}/>
             {title}
         </Button>
     );

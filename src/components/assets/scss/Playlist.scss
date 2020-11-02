@@ -1,0 +1,13 @@
+.Playlist{
+  h3{
+    background-color: #333333;
+    padding: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .Playlist-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}

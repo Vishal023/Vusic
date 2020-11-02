@@ -1,6 +1,8 @@
 .CurrentPlayingLarge{
   height: 90vh;
   display: flex;
+  position: relative;
+  z-index: 99;
   .music-left{
     position: relative;
     flex-grow: 1;
