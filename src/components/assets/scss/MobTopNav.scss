@@ -3,3 +3,11 @@
   display: flex;
   flex-flow: row;
 }
+
+@media only screen and (max-height: 610px) {
+  .mob-top-navigation {
+    height: 10vh;
+    display: flex;
+    flex-flow: row;
+  }
+}

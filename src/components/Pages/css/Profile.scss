@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   .top-profile{
-    position: sticky;
-    top: 0;
+
     z-index: 10;
     background-color: #f1f1f1;
     border-bottom: 1px solid gainsboro;
@@ -39,7 +38,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow: auto;
 
     h3{
       padding-left: 10px;

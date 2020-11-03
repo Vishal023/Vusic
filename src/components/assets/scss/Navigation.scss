@@ -1,37 +1,41 @@
-@mixin flexBox(){
+@mixin flexBox() {
   display: flex;
   padding: 10px;
   align-items: center;
   justify-content: center;
 }
-nav{
+
+nav {
   height: 10vh;
   display: flex;
   background-color: #f6f6f6;
   user-select: none;
   border-bottom: 1px solid #e0e0e0;
   padding-right: 10px;
-  div{
+
+  div {
     @include flexBox;
   }
-  .navigation{
+
+  .navigation {
     flex-flow: row wrap;
   }
-  .language{
+
+  .language {
     padding: 10px;
   }
-  .Dropdown-btn{
+
+  .Dropdown-btn {
     display: flex;
-    .wrapper{
+    .wrapper {
       padding: 0;
       flex-direction: column;
     }
   }
-
 }
 
-@media only screen and (max-width: 970px){
-  nav{
+@media only screen and (max-width: 970px) {
+  nav {
     display: none;
   }
 }

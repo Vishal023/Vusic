@@ -2,19 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   height: 80vh;
   overflow: auto;
   border-right: 1px solid #e0e0e0;
   .p1 {
-    border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
     padding: 15px;
     font-weight: bolder;
-    font-size: 1.3rem;
     user-select: none;
-/*    display: flex;
-    align-items: center;
-    justify-content: space-between;*/
   }
   .lib-sub {
     padding: 10px;
@@ -22,15 +18,20 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    .MuiButton-startIcon{
+      color: #07689f;
+    }
   }
   .aside-bar-container {
     display: flex;
     flex-flow: column;
     width: 100%;
-    margin: 6px;
   }
   .playlist{
     flex: 1;
+    .p1{
+      border-top: 1px solid #e0e0e0;
+    }
     .lib-sub:hover{
       background-color: #a2d5f2;
     }

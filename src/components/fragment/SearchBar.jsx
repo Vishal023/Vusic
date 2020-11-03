@@ -55,7 +55,7 @@ const SearchBar = () => {
                 <div className={"SearchBar-customPlaceholderOpen"}
                      onClick={handleSearchBarOpen}>
                     <SearchSharpIcon style={{color: "grey"}} className="search-icon" fontSize="small"/>
-                    <p>&nbsp;Search</p>
+                    <p className={"hide"}>&nbsp;Search</p>
                 </div>
             }
             {
@@ -64,7 +64,7 @@ const SearchBar = () => {
                      onClick={handleSearchBarOpen}>
                     {/*
                     <p>Close&nbsp;</p>*/}
-                    <CancelIcon style={{color: "grey"}} className="cancel" fontSize="small"/>
+                    <CancelIcon style={{color: "grey"}} className="cancel hide" fontSize="small"/>
                 </div>
             }
 

@@ -1,7 +1,8 @@
-.bottom-navigation{
+.bottom-navigation {
   height: 10vh;
   display: flex;
-  .bottom-navigation-link{
+
+  .bottom-navigation-link {
     position: relative;
     width: 100%;
     background-color: white;
@@ -10,41 +11,53 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .BottomNavAction{
+
+    .BottomNavAction {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
     }
-    .label{
+
+    .label {
       display: none;
       z-index: 1000;
       position: absolute;
       bottom: 5px;
       color: #07689f;
     }
-    .active{
+
+    .active {
       color: #07689f;
     }
-    .active+.label{
-        display: block;
+
+    .active + .label {
+      display: block;
     }
   }
 }
 
-
-
-
-
-
-
-@media only screen and (max-width: 320px){
-  .bottom-navigation{
-    div{
+@media only screen and (max-width: 320px) {
+  .bottom-navigation {
+    div {
       flex-shrink: 1;
-      svg{
+
+      svg {
         font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 610px) {
+  .bottom-navigation {
+    .bottom-navigation-link {
+      .label {
+        display: none;
+      }
+      .active + .label {
+        display: none;
       }
     }
   }

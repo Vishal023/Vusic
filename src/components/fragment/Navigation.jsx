@@ -26,10 +26,6 @@ function Navigation() {
             setLangList(!isLanguageListOpen);
         setOpenProfile(!isOpenProfile);
     }
-
-    const pointer = {
-        cursor: "pointer"
-    };
     const useStyle = useContext(ThemeContext);
     return (
         <nav style={useStyle.component}>

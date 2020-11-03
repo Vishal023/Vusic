@@ -28,6 +28,7 @@
     padding-left: 10px;
   }
   .curr-music-details {
+    text-align: left;
     padding-left: 20px;
     p:nth-child(1) {
       font-weight: bolder;
@@ -87,7 +88,7 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .footer-player {
     .curr-music-details {
       display: none;

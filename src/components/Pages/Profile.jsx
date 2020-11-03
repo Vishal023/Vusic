@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './css/Profile.scss';
-import {Avatar, Button} from "@material-ui/core";
+import {Avatar} from "@material-ui/core";
 import {useSelector} from "react-redux";
 import MusicCard from "../fragment/MusicCard";
 import Container from "../fragment/Container";

@@ -6,11 +6,11 @@ import Logo from "../assets/img/headphonesLogo.svg"
 class Brand extends React.Component {
     render() {
         return (
-            <div className={"brand"}>
+            <div  className={"brand"}>
                 <Link to={"/home"}>
                     <h1>
                         V
-                        <img src={Logo} width={"36px"} alt=""/>
+                        <img src={Logo} width={"24px"} alt=""/>
                         sic
                     </h1>
                 </Link>

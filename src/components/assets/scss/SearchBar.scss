@@ -1,47 +1,60 @@
-.SearchBar{
+.SearchBar {
   flex: 1;
   padding: 0;
   position: relative;
   margin: 0 50px;
   transition: margin .15s ease-in-out;
-  .search-container{
+
+  .search-container {
     padding: 0;
     background-color: #fff;
-    border-radius: 999px;
+    border-radius: 10px;
     height: 2.5rem;
     flex-grow: 1;
     border: 1px solid #e0e0e0;
   }
-  input{
+
+  input {
     background-color: transparent;
     width: 100%;
     height: 100%;
     line-height: 2.5rem;
     padding: 11px 45px;
-    border-radius: 999px;
+    border-radius: 10px;
     outline: none;
     border: none;
   }
-  .SearchBar-customPlaceholderOpen{
+
+  .SearchBar-customPlaceholderOpen {
     cursor: text;
     position: absolute;
     width: 100%;
   }
-  .SearchBar-customPlaceholderClose{
+
+  .SearchBar-customPlaceholderClose {
     cursor: pointer;
     position: absolute;
     right: 10px;
   }
-  .search-icon{
+
+  .search-icon {
     position: absolute;
     left: 11px;
     top: 50%;
     transform: translateY(-50%);
   }
-  p{
+
+  p {
     color: grey;
   }
 }
-.open{
+
+.open {
   margin: 0;
+}
+
+@media only screen and (max-width: 215px) {
+  .hide {
+    display: none;
+  }
 }
