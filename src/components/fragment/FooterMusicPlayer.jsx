@@ -17,7 +17,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {setBannerOpen, setCurrentPlaying} from "../../actions/actions";
 import Button from "@material-ui/core/Button";
 
-
 function FooterMusicPlayer({music}) {
 
     const [{id, name, author_name, img, musicName}, setCurrTrack] = useState(music);
@@ -59,8 +58,9 @@ function FooterMusicPlayer({music}) {
                 break;
         }
     };
-    const handleSeekChange = (event) => {
-        setSeekTime(event.target.value)
+    const handleSeekChange = (event, newValue) => {
+        audioElement.current.currentTime =(newValue*duration)/100;
+        setSeekTime(newValue)
     };
     const handleVolumeChange = (event, newValue) => {
         setVolume(newValue);
@@ -134,16 +134,17 @@ function FooterMusicPlayer({music}) {
             s = Math.floor((t - Date.parse("1/1/70")) / 3600000) + s.substr(2);
         return s.substring(3);
     }
-
     return (
         <div style={useStyle.component} className={"footer-player"}>
             <div className="playback">
-                <input className={"playback-completed"}
-                       value={seekTime.toString()}
-                       onChange={handleSeekChange}
-                       type="range"/>
+                {
+                    !isNaN(seekTime) &&
+                    <Slider style={{color: useStyle.theme}}
+                            className={"playback-completed"}
+                            value={seekTime} onChange={handleSeekChange}/>
+                }
             </div>
-            <Button variant={"text"}
+            <Button
                     startIcon={<Avatar variant="square" src={require("../assets/img/" + img).default} alt={name}/>}
                     onClick={handleBannerToggle}
                     className="curr-music-container">
@@ -162,7 +163,7 @@ function FooterMusicPlayer({music}) {
 
                 <ControlsToggleButton style={pointer} type={"prev"}
                                       defaultIcon={<SkipPreviousIcon fontSize={"large"}/>}
-                                      changeIcon={<SkipPreviousIcon fontSize={"large"}/>}
+                                      change    Icon={<SkipPreviousIcon fontSize={"large"}/>}
                                       onClicked={handleToggle}/>
 
                 <audio ref={audioElement} src={require("../assets/music/" + musicName).default} preload={"metadata"}/>

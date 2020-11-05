@@ -7,15 +7,16 @@
   align-items: center;
   .playback {
     position: absolute;
-    top: -12px;
+    top: -14px;
+    z-index: 99999999;
     left: 0;
     width: 100%;
+    overflow: hidden;
     .playback-completed{
       width: 100%;
-      margin: 0;
-      height: 4px;
-      outline: none;
-      cursor: pointer;
+    }
+    .MuiSlider-thumb{
+      box-shadow: none !important;
     }
   }
 }
