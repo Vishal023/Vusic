@@ -163,7 +163,7 @@ function FooterMusicPlayer({music}) {
 
                 <ControlsToggleButton style={pointer} type={"prev"}
                                       defaultIcon={<SkipPreviousIcon fontSize={"large"}/>}
-                                      change    Icon={<SkipPreviousIcon fontSize={"large"}/>}
+                                      changeIcon={<SkipPreviousIcon fontSize={"large"}/>}
                                       onClicked={handleToggle}/>
 
                 <audio ref={audioElement} src={require("../assets/music/" + musicName).default} preload={"metadata"}/>

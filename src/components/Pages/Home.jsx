@@ -15,6 +15,7 @@ import CurrentPlayingLarge from "../fragment/CurrentPlayingLarge";
 import Search from "./Search";
 import About from "./About";
 import Playlist from "../fragment/Playlist";
+import {Skeleton} from "@material-ui/lab";
 
 function getCurrPage(pathName) {
     switch (pathName) {
@@ -29,7 +30,7 @@ function getCurrPage(pathName) {
         case "/home/about":
             return <About/>
         default:
-            if (pathName.startsWith("/home/playlist/")){
+            if (pathName.startsWith("/home/playlist/")) {
                 return <Playlist/>
             }
             return null
@@ -67,42 +68,57 @@ function Home() {
         setCurrMusic(playing)
     }, [playing])
 
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => {
+        setLoaded(true)
+    }, []);
+
+
     return (
         <div style={useStyle.component} className={"home-container"}>
             {
-                screenSize <= 970 ?
-                    <MobileTopNavigation/> :
-                    <Navigation/>
+                !loaded ?
+                    <div className="Home-skeleton">
+                        <Skeleton animation={"wave"} variant={"rect"} height={"100vh"}/>
+                    </div>
+                    :
+                    <>
+                        {
+                            screenSize <= 970 ?
+                                <MobileTopNavigation/> :
+                                <Navigation/>
+                        }
+                        <section className={"home-music-container"}>
+                            <div className="sidebar-home">
+                                <SideBar/>
+                            </div>
+                            <div className="main-home">
+                                {
+                                    Page
+                                }
+                            </div>
+                        </section>
+                        {
+                            bannerOpen
+                            &&
+                            <section className="current-large-banner">
+                                <CurrentPlayingLarge/>
+                            </section>
+                        }
+                        <React.Fragment>
+                            {
+                                currMusic
+                                    ?
+                                    <FooterMusicPlayer music={currMusic}/>
+                                    :
+                                    <FooterSelectMusic/>
+                            }
+                            {
+                                screenSize <= 970 && <BottomNavigationMobile/>
+                            }
+                        </React.Fragment>
+                    </>
             }
-            <section className={"home-music-container"}>
-                <div className="sidebar-home">
-                    <SideBar/>
-                </div>
-                <div className="main-home">
-                    {
-                        Page
-                    }
-                </div>
-            </section>
-            {
-                bannerOpen
-                &&
-                <section className="current-large-banner">
-                    <CurrentPlayingLarge/>
-                </section>
-            }
-            <React.Fragment>
-                {
-                    currMusic
-                        ?
-                        <FooterMusicPlayer music={currMusic}/>
-                        :
-                        <FooterSelectMusic/>
-                }
-                {
-                    screenSize <= 970 && <BottomNavigationMobile/>
-                }
-            </React.Fragment>
         </div>
     );
 }

@@ -27,7 +27,6 @@ const App = () => {
         }
     },[dispatch, language]);
 
-
     return (
         <ThemeContext.Provider value={themes.light}>
             <>
