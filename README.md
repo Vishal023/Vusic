@@ -27,4 +27,4 @@
 
 [Music](https://ncs.io/music) by NCS
 
-
+    Please make sure you fork the repository
