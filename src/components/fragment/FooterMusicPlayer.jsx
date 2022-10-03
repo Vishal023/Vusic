@@ -145,7 +145,7 @@ function FooterMusicPlayer({music}) {
                 }
             </div>
             <Button
-                    startIcon={<Avatar variant="square" src={require("../assets/img/" + img).default} alt={name}/>}
+                    startIcon={<Avatar variant="square" src={require("../assets/img/" + img)} alt={name}/>}
                     onClick={handleBannerToggle}
                     className="curr-music-container">
                 <div className="curr-music-details">
@@ -166,7 +166,7 @@ function FooterMusicPlayer({music}) {
                                       changeIcon={<SkipPreviousIcon fontSize={"large"}/>}
                                       onClicked={handleToggle}/>
 
-                <audio ref={audioElement} src={require("../assets/music/" + musicName).default} preload={"metadata"}/>
+                <audio ref={audioElement} src={require("../assets/music/" + musicName)} preload={"metadata"}/>
 
                 <ControlsToggleButton style={pointer} type={"play-pause"}
                                       defaultIcon={<PlayArrowIcon fontSize={"large"}/>}
