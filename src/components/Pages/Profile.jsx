@@ -41,7 +41,7 @@ function Profile() {
                         VS
                     </Avatar>
                     <div className="profile-detail">
-                        <h3>Vishal </h3>
+                        <h3>SIVA </h3>
                         <span className={"profile-playlist"}>
                             <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay}
                                             href={"/home/playlist/instrumental"} title={"Instrumental"}/>
